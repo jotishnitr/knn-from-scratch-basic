@@ -1,38 +1,17 @@
-# Simple KNN implementation to understand distance-based classification
-# Written using basic Python without external ML libraries
-import math
+# KNN From Scratch (Basic)
 
-points=[[1,2],[2,3],[6,5],[4,5],[3,4]]
-labels=['A','A','A','B','B'] #labelling the points taken
-test=[2,2]
-k=2;
+This repository contains a simple implementation of the K-Nearest Neighbors (KNN) algorithm
+written using basic Python only. No machine learning libraries are used.
 
-#calculating distances from each point to test point.
-distances=[]
-for i in range(len(points)):
-    x_diff=(points[i][0]-test[0])
-    y_diff=(points[i][1]-test[1])
-    distance=math.sqrt((x_diff**2)+(y_diff**2))
-    distances.append([distance,labels[i]])
-print("Distances:",distances)
+## Description
+The KNN algorithm classifies a test point by calculating distances from known points
+and assigning the label that appears most among the nearest neighbors.
 
-#sorting the distances so that we can get shorter distance points to forward positions
-distances.sort()
-print("Sorted Distances:",distances)
+## How to Run
+1. Make sure Python is installed.
+2. Open the file `knn.py`.
+3. Run the program using:
+   python knn.py
 
-#Voting
-countA=0
-countB=0
-for i in range (k):
-    if distances[i][1]=='A':
-        countA+=1
-    else:
-        countB+=1
-
-#final decision
-if countA>countB:
-    prediction='A'
-else:
-    prediction='B'
-    
-print("Predicted label:",prediction)
+## Language Used
+Python
