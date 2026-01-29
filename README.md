@@ -3,7 +3,7 @@
 This repository contains a simple implementation of the K-Nearest Neighbors (KNN) algorithm
 written using basic Python only. No machine learning libraries are used.
 
-## Description
+## Description 
 The KNN algorithm classifies a test point by calculating distances from known points
 and assigning the label that appears most among the nearest neighbors.
 
